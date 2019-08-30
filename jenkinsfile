@@ -1,0 +1,8 @@
+node('MVN'){
+    stage('GIT'){
+        git branch: 'dev', url: 'https://github.com/sainath2929/jenkins_practice.git'
+    }   
+    stage('build'){
+        sh label: '', script: 'mvn package'
+        }
+}
